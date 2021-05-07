@@ -12,6 +12,7 @@ public class IntList {
      * First element of list.
      */
     public int first;
+
     /**
      * Remaining elements of list.
      */
@@ -37,7 +38,6 @@ public class IntList {
      * Returns a list equal to L with all elements squared. Destructive.
      */
     public static void dSquareList(IntList L) {
-
         while (L != null) {
             L.first = L.first * L.first;
             L = L.rest;
@@ -74,12 +74,10 @@ public class IntList {
 
     /** DO NOT MODIFY ANYTHING ABOVE THIS LINE! */
 
-
     /**
      * Returns a list consisting of the elements of A followed by the
      * *  elements of B.  May modify items of A. Don't use 'new'.
      */
-
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
         return null;
@@ -94,28 +92,12 @@ public class IntList {
         return null;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * DO NOT MODIFY ANYTHING BELOW THIS LINE! Many of the concepts below here
      * will be introduced later in the course or feature some form of advanced
      * trickery which we implemented to help make your life a little easier for
      * the lab.
      */
-
     @Override
     public int hashCode() {
         return first;
@@ -142,7 +124,7 @@ public class IntList {
     }
 
     /**
-     * Returns true iff X is an IntList containing the same sequence of ints
+     * Returns true if X is an IntList containing the same sequence of ints
      * as THIS. Cannot handle IntLists with cycles. You are not expected to
      * read or understand this method.
      */
@@ -175,7 +157,6 @@ public class IntList {
      * an IntList into a String and that IntList has a loop, your computer
      * doesn't get stuck in an infinite loop.
      */
-
     private int detectCycles(IntList A) {
         IntList tortoise = A;
         IntList hare = A;
@@ -186,7 +167,6 @@ public class IntList {
 
         int cnt = 0;
 
-
         while (true) {
             cnt++;
             if (hare.rest != null) {
@@ -196,7 +176,6 @@ public class IntList {
             }
 
             tortoise = tortoise.rest;
-
             if (tortoise == null || hare == null) {
                 return 0;
             }
@@ -207,9 +186,9 @@ public class IntList {
         }
     }
 
-    @Override
     /** Outputs the IntList as a String. You are not expected to read
      * or understand this method. */
+    @Override
     public String toString() {
         Formatter out = new Formatter();
         String sep;
@@ -231,4 +210,3 @@ public class IntList {
         return out.toString();
     }
 }
-
