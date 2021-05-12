@@ -27,3 +27,5 @@ out/
 .idea/
 *.iml
 
+# java lib
+library-sp19/
